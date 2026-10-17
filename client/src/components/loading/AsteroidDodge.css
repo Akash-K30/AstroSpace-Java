@@ -1,0 +1,116 @@
+.asteroid-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 12px;
+  user-select: none;
+}
+
+.asteroid-game__hint {
+  color: #9aa5b1;
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: center;
+}
+
+.asteroid-game__arena {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  background:
+    radial-gradient(2px 2px at 20% 30%, #ffffff55 50%, transparent 51%),
+    radial-gradient(2px 2px at 70% 65%, #ffffff44 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 40% 80%, #ffffff33 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 85% 20%, #ffffff33 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 55% 45%, #ffffff2a 50%, transparent 51%),
+    linear-gradient(180deg, #0b0f1f 0%, #131a33 100%);
+  border: 1px solid #2a3352;
+  touch-action: none;
+}
+
+.asteroid-game__score {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  color: #e5e9f0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  z-index: 2;
+}
+
+.asteroid-game__rock {
+  position: absolute;
+  font-size: 1.3rem;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 4px rgba(255, 140, 60, 0.35));
+}
+
+.asteroid-game__ship {
+  position: absolute;
+  bottom: 4%;
+  font-size: 1.6rem;
+  line-height: 1;
+  transform: translateX(-10%);
+  transition: left 60ms linear;
+}
+
+.asteroid-game__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(8, 10, 22, 0.72);
+  color: #f2f4f8;
+  font-size: 1rem;
+  z-index: 3;
+}
+
+.asteroid-game__best {
+  color: #9aa5b1;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.asteroid-game__overlay button {
+  margin-top: 6px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #4f7cff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.asteroid-game__overlay button:hover {
+  background: #3d67e6;
+}
+
+.asteroid-game__controls {
+  display: flex;
+  gap: 16px;
+}
+
+.asteroid-game__controls button {
+  width: 52px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #2a3352;
+  background: #171e38;
+  color: #e5e9f0;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.asteroid-game__controls button:active {
+  background: #232c52;
+}
