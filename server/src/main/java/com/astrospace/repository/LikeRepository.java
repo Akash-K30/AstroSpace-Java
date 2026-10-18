@@ -6,8 +6,9 @@ import java.util.List;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.astrospace.domain.Like;
+import com.astrospace.domain.Like;import org.springframework.stereotype.Repository;
 
+@Repository
 public interface LikeRepository extends MongoRepository<Like, String> {
 
     List<Like> findByUser(ObjectId user);
